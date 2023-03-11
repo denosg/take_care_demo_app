@@ -16,19 +16,19 @@ class _TabsScreenState extends State<TabsScreen> {
         'title': 'Home',
       },
       {
-        'page': "",
+        'page': "", //Search Page
         'title': 'Search',
       },
       {
-        'page': const CategoriesScreen(),
+        'page': "", //Messages Page
         'title': 'Messages',
       },
       {
-        'page': const CategoriesScreen(),
+        'page': "", //Bank Page
         'title': 'Bank',
       },
       {
-        'page': const CategoriesScreen(),
+        'page': "", //Settings Page
         'title': 'Settings',
       },
     ];
@@ -47,10 +47,14 @@ class _TabsScreenState extends State<TabsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        //title on top
         title: Text(_pages[_selectedPageIndex]['title'] as String),
       ),
+      //shows the widget in the chosen page
       body: _pages[_selectedPageIndex]['page'] as Widget,
+      //navigation bars
       bottomNavigationBar: BottomNavigationBar(
+        //custom BottomNavigationBar
         onTap: _selectPage,
         unselectedItemColor: Colors.white,
         selectedItemColor: Colors.black,
@@ -58,17 +62,32 @@ class _TabsScreenState extends State<TabsScreen> {
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
-            backgroundColor: Colors.amber,
-            icon: Icon(Icons.category_rounded),
-            label: 'Categories',
+            backgroundColor: Colors.white,
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.amber,
-            icon: Icon(Icons.favorite_rounded),
-            label: 'Favorites',
+            backgroundColor: Colors.white,
+            icon: Icon(Icons.search),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Colors.white,
+            icon: Icon(Icons.chat),
+            label: 'Messages',
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Colors.white,
+            icon: Icon(Icons.wallet),
+            label: 'Wallet',
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: Colors.white,
+            icon: Icon(Icons.settings),
+            label: 'Settings',
           ),
         ],
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Theme.of(context).accentColor,
       ),
     );
   }

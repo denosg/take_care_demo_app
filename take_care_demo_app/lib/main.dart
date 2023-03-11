@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Take Care Demo',
       theme: ThemeData(
         primarySwatch: Colors.purple,
+        accentColor: Colors.white,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
