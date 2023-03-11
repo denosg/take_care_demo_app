@@ -55,15 +55,28 @@ class _TabsNavigationState extends State<TabsNavigation> {
       appBar: AppBar(
         //title on top
         title: _pages[_selectedPageIndex]['title'] == 'TakeCare'
-            ? Text(
-                'TakeCare',
-                style: TextStyle(
-                  fontFamily: 'VeganStyle',
-                  color: Theme.of(context).accentColor,
-                  fontSize: 24,
+            ? Container(
+                padding: const EdgeInsets.only(top: 10),
+                child: Text(
+                  'TakeCare',
+                  style: TextStyle(
+                    fontFamily: 'VeganStyle',
+                    color: Theme.of(context).accentColor,
+                    fontSize: 24,
+                  ),
                 ),
               )
             : Text(_pages[_selectedPageIndex]['title'] as String),
+        actions: [
+          Container(
+            padding: const EdgeInsets.only(right: 7),
+            child: IconButton(
+              //onPressed opens the Personal Profile Page
+              onPressed: () {},
+              icon: const Icon(Icons.person_rounded, size: 33),
+            ),
+          )
+        ],
       ),
       //shows the widget in the chosen page
       body: _pages[_selectedPageIndex]['page'] as Widget,
@@ -75,7 +88,7 @@ class _TabsNavigationState extends State<TabsNavigation> {
         unselectedItemColor: Colors.black,
         selectedItemColor: Colors.black,
         currentIndex: _selectedPageIndex,
-        type: BottomNavigationBarType.fixed,
+        type: BottomNavigationBarType.shifting,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         items: const [

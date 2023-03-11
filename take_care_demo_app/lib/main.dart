@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Take Care Demo',
       theme: ThemeData(
-        primarySwatch: createMaterialColor(Color.fromARGB(255, 255, 255, 255)),
+        primarySwatch:
+            createMaterialColor(const Color.fromARGB(255, 255, 255, 255)),
         primaryColor: Colors.white,
         accentColor: Colors.purple,
       ),
