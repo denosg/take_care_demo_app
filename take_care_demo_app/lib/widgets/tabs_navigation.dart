@@ -1,34 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:take_care_demo_app/screens/home_screen.dart';
+import 'package:take_care_demo_app/screens/messages_screen.dart';
+import 'package:take_care_demo_app/screens/search_screen.dart';
+import 'package:take_care_demo_app/screens/settings_screen.dart';
+import 'package:take_care_demo_app/screens/wallet_screen.dart';
 
-class TabsScreen extends StatefulWidget {
+// ignore: use_key_in_widget_constructors
+class TabsNavigation extends StatefulWidget {
   @override
-  State<TabsScreen> createState() => _TabsScreenState();
+  State<TabsNavigation> createState() => _TabsNavigationState();
 }
 
-class _TabsScreenState extends State<TabsScreen> {
+class _TabsNavigationState extends State<TabsNavigation> {
   List<Map<String, Object>> _pages = [];
 
   @override
   void initState() {
     _pages = [
       {
-        'page': "", //Home Page
-        'title': 'Home',
+        'page': HomeScreen(), //Home Page
+        'title': 'TakeCare',
       },
       {
-        'page': "", //Search Page
+        'page': SearchScreen(), //Search Page
         'title': 'Search',
       },
       {
-        'page': "", //Messages Page
+        'page': MessagesScreen(), //Messages Page
         'title': 'Messages',
       },
       {
-        'page': "", //Bank Page
-        'title': 'Bank',
+        'page': WalletScreen(), //Bank Page
+        'title': 'Wallet',
       },
       {
-        'page': "", //Settings Page
+        'page': SettingsScreen(), //Settings Page
         'title': 'Settings',
       },
     ];
@@ -48,7 +54,16 @@ class _TabsScreenState extends State<TabsScreen> {
     return Scaffold(
       appBar: AppBar(
         //title on top
-        title: Text(_pages[_selectedPageIndex]['title'] as String),
+        title: _pages[_selectedPageIndex]['title'] == 'TakeCare'
+            ? Text(
+                'TakeCare',
+                style: TextStyle(
+                  fontFamily: 'VeganStyle',
+                  color: Theme.of(context).accentColor,
+                  fontSize: 24,
+                ),
+              )
+            : Text(_pages[_selectedPageIndex]['title'] as String),
       ),
       //shows the widget in the chosen page
       body: _pages[_selectedPageIndex]['page'] as Widget,
@@ -56,38 +71,51 @@ class _TabsScreenState extends State<TabsScreen> {
       bottomNavigationBar: BottomNavigationBar(
         //custom BottomNavigationBar
         onTap: _selectPage,
-        unselectedItemColor: Colors.white,
+        iconSize: 30,
+        unselectedItemColor: Colors.black,
         selectedItemColor: Colors.black,
         currentIndex: _selectedPageIndex,
         type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         items: const [
+          //home
           BottomNavigationBarItem(
             backgroundColor: Colors.white,
-            icon: Icon(Icons.home),
+            activeIcon: Icon(Icons.home_rounded),
+            icon: Icon(Icons.home_outlined),
             label: 'Home',
           ),
+          //search
           BottomNavigationBarItem(
             backgroundColor: Colors.white,
+            activeIcon: Icon(Icons.saved_search_outlined),
             icon: Icon(Icons.search),
             label: 'Search',
           ),
+          //messages
           BottomNavigationBarItem(
             backgroundColor: Colors.white,
-            icon: Icon(Icons.chat),
+            activeIcon: Icon(Icons.chat_rounded),
+            icon: Icon(Icons.chat_outlined),
             label: 'Messages',
           ),
+          //wallet
           BottomNavigationBarItem(
             backgroundColor: Colors.white,
-            icon: Icon(Icons.wallet),
+            activeIcon: Icon(Icons.account_balance_wallet_rounded),
+            icon: Icon(Icons.account_balance_wallet_outlined),
             label: 'Wallet',
           ),
+          //setings
           BottomNavigationBarItem(
             backgroundColor: Colors.white,
-            icon: Icon(Icons.settings),
+            activeIcon: Icon(Icons.settings_rounded),
+            icon: Icon(Icons.settings_outlined),
             label: 'Settings',
           ),
         ],
-        backgroundColor: Theme.of(context).accentColor,
+        backgroundColor: Theme.of(context).primaryColor,
       ),
     );
   }
