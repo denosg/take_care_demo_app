@@ -3,12 +3,12 @@ class Person {
   final String name;
   final int age;
   final String imageUrl;
-  final List<String> tasks;
+  final String description;
 
   Person(
       {required this.id,
       required this.name,
       required this.age,
       required this.imageUrl,
-      required this.tasks});
+      required this.description});
 }
