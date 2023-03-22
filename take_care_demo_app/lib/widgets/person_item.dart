@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:take_care_demo_app/data/false_data.dart';
+
+import './task_item.dart';
 
 class PersonItem extends StatelessWidget {
   final int id;
   final String name;
   final int age;
   final String imageUrl;
-  final String description;
+  final List<String> tasks;
 
   const PersonItem(
       {required this.id,
       required this.name,
       required this.age,
       required this.imageUrl,
-      required this.description});
+      required this.tasks});
 
   //opens pressedPersonDetails
   void _showPersonDetails(BuildContext context) {}
@@ -64,8 +64,9 @@ class PersonItem extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 5),
+                //Tasks Widget
                 Container(
-                  width: 200,
+                  width: 215,
                   height: 150,
                   padding: const EdgeInsets.only(right: 12, bottom: 10),
                   child: Card(
@@ -73,18 +74,11 @@ class PersonItem extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Expanded(
-                        child: Padding(
-                      padding: const EdgeInsets.all(7),
-                      child: Expanded(
-                        child: Text(
-                          description,
-                          style: const TextStyle(
-                            fontSize: 14,
-                          ),
-                        ),
-                      ),
-                    )),
+                    child: ListView.builder(
+                      itemBuilder: (ctx, index) =>
+                          TaskItem(taskDescription: tasks[index]),
+                      itemCount: tasks.length,
+                    ),
                   ),
                 )
               ],

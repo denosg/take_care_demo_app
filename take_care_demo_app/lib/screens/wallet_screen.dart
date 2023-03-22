@@ -6,7 +6,7 @@ class WalletScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('cacat'),
+      child: Text('Work in progress !'),
     );
   }
 }

@@ -15,14 +15,15 @@ class HomeScreen extends StatelessWidget {
             var id = falsePersonList[index].id;
             var name = falsePersonList[index].name;
             var age = falsePersonList[index].age;
-            var description = falsePersonList[index].description;
+            var tasks = falsePersonList[index].tasks;
             var imageUrl = falsePersonList[index].imageUrl;
             return PersonItem(
-                id: id,
-                name: name,
-                age: age,
-                imageUrl: imageUrl,
-                description: description);
+              id: id,
+              name: name,
+              age: age,
+              imageUrl: imageUrl,
+              tasks: tasks,
+            );
           }),
           itemCount: falsePersonList.length,
         ),
