@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:take_care_demo_app/data/false_data.dart';
+import 'package:take_care_demo_app/screens/person_details_screen.dart';
 
 class PersonItem extends StatelessWidget {
   final int id;
@@ -18,12 +17,14 @@ class PersonItem extends StatelessWidget {
       required this.description});
 
   //opens pressedPersonDetails
-  void _showPersonDetails(BuildContext context) {}
+  void _showPersonDetails(int id, BuildContext ctx) {
+    Navigator.of(ctx).pushNamed(PersonDetailsScreen.routeName, arguments: id);
+  }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => _showPersonDetails(context),
+      onTap: () => _showPersonDetails(id, context),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
@@ -76,11 +77,13 @@ class PersonItem extends StatelessWidget {
                     child: Expanded(
                         child: Padding(
                       padding: const EdgeInsets.all(7),
-                      child: Expanded(
-                        child: Text(
-                          description,
-                          style: const TextStyle(
-                            fontSize: 14,
+                      child: Center(
+                        child: Expanded(
+                          child: Text(
+                            description,
+                            style: const TextStyle(
+                              fontSize: 14,
+                            ),
                           ),
                         ),
                       ),

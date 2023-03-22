@@ -54,19 +54,17 @@ class _TabsNavigationState extends State<TabsNavigation> {
     return Scaffold(
       appBar: AppBar(
         //title on top
-        title: _pages[_selectedPageIndex]['title'] == 'TakeCare'
-            ? Container(
-                padding: const EdgeInsets.only(top: 10),
-                child: Text(
-                  'TakeCare',
-                  style: TextStyle(
-                    fontFamily: 'VeganStyle',
-                    color: Theme.of(context).accentColor,
-                    fontSize: 24,
-                  ),
-                ),
-              )
-            : Text(_pages[_selectedPageIndex]['title'] as String),
+        title: Container(
+          padding: const EdgeInsets.only(top: 10),
+          child: Text(
+            _pages[_selectedPageIndex]['title'] as String,
+            style: TextStyle(
+              fontFamily: 'VeganStyle',
+              color: Theme.of(context).accentColor,
+              fontSize: 24,
+            ),
+          ),
+        ),
         actions: [
           Container(
             padding: const EdgeInsets.only(right: 7),
