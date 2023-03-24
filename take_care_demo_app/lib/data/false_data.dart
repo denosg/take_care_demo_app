@@ -1,5 +1,7 @@
 import 'package:take_care_demo_app/models/person.dart';
 
+import '../models/filter_options.dart';
+
 final List<Person> falseData = [
   Person(
     id: 1,
@@ -57,4 +59,10 @@ final List<Person> falseData = [
       'Sa o invete sa utilizeze tehnologia',
     ],
   ),
+];
+
+final List<FilterOptions> filters = [
+  FilterOptions('range', true),
+  FilterOptions('difficulty', true),
+  FilterOptions('pay', true),
 ];
