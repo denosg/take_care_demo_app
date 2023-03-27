@@ -6,7 +6,7 @@ class MessagesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('cacat'),
+      child: const Text('Work in progress !'),
     );
   }
 }

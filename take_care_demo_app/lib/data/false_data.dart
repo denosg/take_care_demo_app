@@ -10,7 +10,7 @@ final List<Person> falseData = [
     imageUrl:
         'https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
     description:
-        'Doamna Ioana, o batranica cu probleme de sanatate, are nevoie de un ingrijitor dedicat pentru a o ajuta cu activitatile zilnice acasa.',
+        'Marian Lucica este o femeie în vârstă cu afectiuni medicale care caută un îngrijitor cald si grijuliu, care să o ajute cu treburile zilnice în casă.',
     tasks: [
       'Sa dozezi pastilele necesare la intervale corespunzatoare',
       'Sa ingrjieasca gradina',
@@ -24,7 +24,7 @@ final List<Person> falseData = [
     imageUrl:
         'https://images.unsplash.com/photo-1562457753-6867bda028cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1166&q=80',
     description:
-        'Doamna Ioana, o batranica cu probleme de sanatate, are nevoie de un ingrijitor dedicat pentru a o ajuta cu activitatile zilnice acasa.',
+        'Jhon Jhon este un bătrân solitar cu probleme de sănătate care are nevoie de un îngrijitor dedicat si atent la detalii, pentru a-l ajuta cu activitătile zilnice, inclusiv administrarea medicamentelor si îngrijirea personală.',
     tasks: [
       'Sa dozezi pastilele necesare la intervale corespunzatoare',
       'Sa ingrjieasca gradina',
@@ -38,7 +38,7 @@ final List<Person> falseData = [
     imageUrl:
         'https://images.unsplash.com/photo-1498757581981-8ddb3c0b9b07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80',
     description:
-        'Doamna Ioana, o batranica cu probleme de sanatate, are nevoie de un ingrijitor dedicat pentru a o ajuta cu activitatile zilnice acasa.',
+        'Aioanei Maria este o bunică în vârstă cu probleme de mobilitate, care are nevoie de un îngrijitor răbdător si cu experientă pentru a o ajuta să se descurce cu activitătile zilnice în confortul propriei case.',
     tasks: [
       'Sa dozezi pastilele necesare la intervale corespunzatoare',
       'Sa ingrjieasca gradina',
@@ -52,7 +52,7 @@ final List<Person> falseData = [
     imageUrl:
         'https://images.unsplash.com/photo-1505685679686-2490cab6217d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
     description:
-        'Doamna Ioana, o batranica cu probleme de sanatate, are nevoie de un ingrijitor dedicat pentru a o ajuta cu activitatile zilnice acasa.',
+        'Doamna Aurica Ilonta, o văduvă în vârstă cu probleme de sănătate, caută un îngrijitor dedicat si amabil care să o ajute cu activitătile zilnice la domiciliu.',
     tasks: [
       'Sa dozezi pastilele necesare la intervale corespunzatoare',
       'Sa ingrjieasca gradina',

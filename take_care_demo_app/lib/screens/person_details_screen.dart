@@ -80,7 +80,8 @@ class PersonDetailsScreen extends StatelessWidget {
                       height: 300,
                       child: ListView.builder(
                         itemBuilder: (context, index) => TaskItem(
-                            taskDescription: selectedPerson.tasks[index]),
+                          taskDescription: selectedPerson.tasks[index],
+                        ),
                         itemCount: selectedPerson.tasks.length,
                       ),
                     ),
