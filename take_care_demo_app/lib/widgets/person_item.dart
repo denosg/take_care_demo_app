@@ -69,26 +69,20 @@ class PersonItem extends StatelessWidget {
                   width: 200,
                   height: 150,
                   padding: const EdgeInsets.only(right: 12, bottom: 10),
-                  child: Card(
-                    elevation: 5,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Expanded(
-                        child: Padding(
-                      padding: const EdgeInsets.all(7),
-                      child: Center(
-                        child: Expanded(
-                          child: Text(
-                            description,
-                            style: const TextStyle(
-                              fontSize: 14,
-                            ),
+                  child: Expanded(
+                      child: Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Center(
+                      child: Expanded(
+                        child: Text(
+                          description,
+                          style: const TextStyle(
+                            fontSize: 14,
                           ),
                         ),
                       ),
-                    )),
-                  ),
+                    ),
+                  )),
                 )
               ],
             )
