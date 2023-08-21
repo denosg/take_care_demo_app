@@ -23,10 +23,11 @@ class MyApp extends StatelessWidget {
       title: 'Take Care Demo',
       theme: ThemeData(
         fontFamily: 'Lato',
-        primarySwatch:
-            createMaterialColor(const Color.fromARGB(255, 255, 255, 255)),
-        primaryColor: Colors.white,
-        accentColor: Colors.purple,
+        colorScheme: ColorScheme.light(
+          primary: Colors.white,
+          secondary: Colors.purple,
+          tertiary: createMaterialColor(const Color.fromRGBO(226, 229, 222, 1)),
+        ),
         pageTransitionsTheme: const PageTransitionsTheme(
           builders: {
             TargetPlatform.android: CupertinoPageTransitionsBuilder(),

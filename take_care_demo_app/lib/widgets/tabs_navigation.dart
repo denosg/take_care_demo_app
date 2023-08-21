@@ -60,7 +60,7 @@ class _TabsNavigationState extends State<TabsNavigation> {
             _pages[_selectedPageIndex]['title'] as String,
             style: TextStyle(
               fontFamily: 'VeganStyle',
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               fontSize: 24,
             ),
           ),

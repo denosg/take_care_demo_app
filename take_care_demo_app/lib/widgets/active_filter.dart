@@ -15,7 +15,7 @@ class ActiveFilter extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         elevation: 5,
         color: isActive
-            ? Theme.of(context).accentColor
+            ? Theme.of(context).colorScheme.secondary
             : Theme.of(context).primaryColor,
         child: Center(
             child: Text(
